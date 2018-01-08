@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   background-color: #143A52;
+  opacity: 0.95;
 }
 figure {
   width: 50%;
@@ -111,3 +112,85 @@ figure #bike1 use {
             transform: translateX(0px);
   }
 }
+
+.btn_SignUp {
+  color: white;
+  border: 2px solid white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  display: flex;
+  float: left;
+  width: 100px;
+  margin-left: 184px;
+  margin-top: 300px;
+  text-decoration: none;
+}
+
+ .btn_SignUp a {
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    font-family: "Barrio";
+  }
+
+.btn_SignUp:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+
+.btn_LogIn {
+  color: white;
+  border: 2px solid white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  display:flex;
+  float: right;
+  width: 100px;
+  margin-right: 184px;
+  margin-top: 300px;
+  text-decoration: none;
+}
+
+.btn_LogIn a {
+  text-decoration: none;
+  color: white;
+  font-family: "Barrio";
+  padding-left: 26px;
+}
+
+.btn_LogIn:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+ // color: white;
+ // border: 1px solid #999999;
+ // padding: 10px 15px;
+ // border-radius: 50px;
+ // font-weight: lighter;
+ // opacity: 0.6;
+ // display: flex;
+ // float: left;
+ // padding: 15px;
+ // width: 100px;
+ // margin-left: 184px;
+ // margin-top: 195px;
+
+
+
+
+
+
+
+
+
