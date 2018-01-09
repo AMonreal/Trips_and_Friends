@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get "/sign_up" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
   end
 
-
+root to: 'pages#home'
 end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
