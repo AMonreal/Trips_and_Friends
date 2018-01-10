@@ -104,6 +104,8 @@ input[type="submit"]:hover {
   font-size: 12px;
   text-indent: 25px;
   line-height: 15px;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #435160;
 }
 
 ::-webkit-input-placeholder {

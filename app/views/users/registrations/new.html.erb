@@ -1,30 +1,19 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= stylesheet_link_tag "registration" %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+<link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
+
+<div class='login'>
+  <h2>Sign Up</h2>
+  <input first_name='first_name' placeholder='First Name' type='text'>
+  <input last_name='Last Name' placeholder='Last Name' type='text'>
+  <input name='email' placeholder='E-Mail Address' type='text'>
+  <input id='pw' name='password' placeholder='Password' type='password'>
+  <div class='agree'>
+    <input id='agree' name='agree' type='checkbox'>
+    <label for='agree'></label>Accept rules and conditions
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+  <input class='animated' type='submit' value='Submit'>
+</div>
 
