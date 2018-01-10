@@ -1,36 +1,18 @@
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
- <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.email_field :first_name, autofocus: true, autocomplete: "First Name" %>
-  </div>
+<%= stylesheet_link_tag "registration" %>
 
-   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.email_field :last_name, autofocus: true, autocomplete: "Last Name" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+<div class='login'>
+  <h2>Log In</h2>
+  <input first_name='first_name' placeholder='First Name' type='text'>
+  <input last_name='Last Name' placeholder='Last Name' type='text'>
+  <input name='email' placeholder='E-Mail Address' type='text'>
+  <input id='pw' name='password' placeholder='Password' type='password'>
+ <!--  <div class='agree'>
+    <input id='agree' name='agree' type='checkbox'>
+    <label for='agree'></label>Accept rules and conditions
+  </div> -->
+  <input class='animated' type='submit' value='Done :)'>
+</div>
