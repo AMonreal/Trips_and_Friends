@@ -58,11 +58,11 @@ label {
   content: "";
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  border: 3px solid #435160;
+  border: 3px solid white;
 }
 
 #agree:checked ~ label[for=agree] {
-  background: #435160;
+  background: white;
 }
 
 input[type="submit"] {
@@ -105,7 +105,7 @@ input[type="submit"]:hover {
   text-indent: 25px;
   line-height: 15px;
   font-family: 'Gloria Hallelujah', cursive;
-  color: #435160;
+  color: white;
 }
 
 ::-webkit-input-placeholder {
