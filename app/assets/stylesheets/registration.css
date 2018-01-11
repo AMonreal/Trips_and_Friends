@@ -17,6 +17,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.logo {
+  background-image: url(../assets/images/backpack.png);
+}
+
 a {
   color: #435160;
   text-decoration: none;
