@@ -3,6 +3,9 @@ root to: 'pages#home'
 devise_for :users
 resources :users, :only => [:show]
 
+resources :users, except: :show
+get 'profile/:user_id' => 'users#show', as: :profile
+
 end
 
 
