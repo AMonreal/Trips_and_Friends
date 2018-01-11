@@ -17,6 +17,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+#planet {
+  width: 40px;
+}
+
 a {
   color: #435160;
   text-decoration: none;

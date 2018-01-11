@@ -17,8 +17,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-.logo {
-  background-image: url(../assets/images/backpack.png);
+#planet {
+  width: 40px;
 }
 
 a {
