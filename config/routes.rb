@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 root to: 'pages#home'
 devise_for :users
-resources :users, :only => [:show]
+# resources :users, :only => [:show]
+get 'users/:id' => 'users#show', as: :user
+# resources :users, except: :show
+# get 'profile/:user_id' => 'users#show', as: :profile
+# resources :users, only: [:edit, :update, :show]
 
-resources :users, except: :show
-get 'profile/:user_id' => 'users#show', as: :profile
 
 end
 
