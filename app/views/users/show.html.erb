@@ -1,4 +1,23 @@
 
-<%= link_to 'Users Profile', user_path(@user) %>
 
-<h1>User's Profile Page</h1>
+<%= stylesheet_link_tag "users" %>
+<link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
+
+
+<div class="wrapper">
+  <div class="profile-container">
+    <div class="profile-content">
+      <h1>Profile</h1>
+        <div class="avatar-container">
+        <%= @user.avatar %>
+        </div>
+        <div class="user_informations">
+      <%= @user.first_name %>
+      <%= @user.last_name %>
+      </div>
+    </div>
+  </div>
+  <div class="map-container">
+
+  </div>
+</div>

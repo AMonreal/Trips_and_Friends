@@ -7,22 +7,34 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-require 'open-uri'
-require 'json'
+# require 'open-uri'
+# require 'json'
 
-puts "Creating users database..."
-10.times do
+# puts "Creating users database..."
+# 10.times do
 
-url = 'https://randomuser.me/api/'
-user_serialized = open(url).read
-users_list = JSON.parse(user_serialized)
+# url = 'https://randomuser.me/api/'
+# user_serialized = open(url).read
+# users_list = JSON.parse(user_serialized)
 
-  user = User.new(
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
-  avatar: users_list["results"][0]["picture"]["large"])
-  user.username = user.first_name
-  user.password = user.first_name
-  user.save
-end
+#   user = User.new(
+#   first_name: Faker::Name.first_name,
+#   last_name: Faker::Name.last_name,
+#   email: Faker::Internet.email,
+#   avatar: users_list["results"][0]["picture"]["large"])
+#   user.username = user.first_name
+#   user.password = user.first_name
+#   user.save
+# end
+
+# users = User.create([
+#   {first_name: 'Ariane'}, {last_name: 'Monreal'}, {email: 'arianemonreal@hotmail.fr'}])
+# users.save!
+
+puts 'Creating users...'
+user1 = User.new(first_name: "Ariane", last_name: "Monreal", email: "arianemonreal0@gmail.com", password: "ariane", password_confirmation: "ariane", avatar: url('tourist.svg'))
+user1.save!
+
+user2 = User.new(first_name: "Marie", last_name: "Penicaut", email: "mariepenicaut@gmail.com", password: "MarieMarie", password_confirmation: "MarieMarie")
+user2.save!
+puts 'Finished!'

@@ -1,3 +1,32 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+}
+
+.profile-container {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.map-container {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.user_informations {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  padding-left: 160px;
+  padding-top: 10px;
+}
+
+h1 {
+  font-family: 'Barrio';
+  font-size: 30px;
+  color: #35B0AB;
+  padding-left: 60px;
+}
