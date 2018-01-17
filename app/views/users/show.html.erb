@@ -23,6 +23,11 @@
     </div>
   </div>
   <div class="map-container">
-
+    <div style='width: 800px;'>
+      <div id="multi_markers" style='width: 800px; height: 400px;'></div>
+        <script>
+          markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        </script>
+    </div>
   </div>
 </div>
