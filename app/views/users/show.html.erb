@@ -9,11 +9,17 @@
     <div class="profile-content">
       <h1>Profile</h1>
         <div class="avatar-container">
+          <div id="avatar" class="avatar">
+          </div>
         </div>
         <div class="user_informations">
-      <%= @user.first_name %>
-      <%= @user.last_name %>
-      </div>
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </div>
+          <%= link_to "My Friends", "/mettreroute", class: "linktofriends" %>
+          <%= image_tag "group.svg", id: "logo2" %>
+          <%= link_to "My Trips", "/mettreroute", class: "linktotrips" %>
+          <%= image_tag "maps.svg", id: "logo1" %>
     </div>
   </div>
   <div class="map-container">
