@@ -16,3 +16,4 @@ Rails.application.config.assets.precompile += %w( Usersshow.js )
 Rails.application.config.assets.precompile += %w( session.css )
 Rails.application.config.assets.precompile += %w( registration.css )
 Rails.application.config.assets.precompile += %w( users.scss )
+

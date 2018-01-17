@@ -18,8 +18,12 @@
 .map-container {
   grid-column: 3 / span 3;
   grid-row: 1 / span 2;
-  border: 1px solid white;
-  border-radius: 3px;
+  // border: 1px solid white;
+  // border-radius: 3px;
+}
+
+#map {
+  position: sticky !important;
 }
 
 .user_informations {
