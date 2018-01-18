@@ -55,8 +55,8 @@ label {
   display: block;
   position: absolute;
   margin-right: 10px;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: transparent;
   content: "";
