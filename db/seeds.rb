@@ -30,20 +30,24 @@
 # users = User.create([
 #   {first_name: 'Ariane'}, {last_name: 'Monreal'}, {email: 'arianemonreal@hotmail.fr'}])
 # users.save!
+puts "destroying old data..."
+  # Like.destroy_all
+  Trip.destroy_all
+  User.destroy_all
+puts "database clean..."
 
 puts 'Creating users...'
-user1 = User.new(first_name: "Ariane", last_name: "Monreal", email: "arianemonreal0@gmail.com", password: "ariane", password_confirmation: "ariane")
+user1 = User.new(id: "1", first_name: "Ariane", last_name: "Monreal", email: "arianemonreal0@gmail.com", password: "ariane", password_confirmation: "ariane")
 user1.save!
 
-user2 = User.new(first_name: "Marie", last_name: "Penicaut", email: "mariepenicaut@gmail.com", password: "MarieMarie", password_confirmation: "MarieMarie")
+user2 = User.new(id: "2", first_name: "Marie", last_name: "Penicaut", email: "mariepenicaut@gmail.com", password: "MarieMarie", password_confirmation: "MarieMarie")
 user2.save!
 puts 'Finished!'
 
 puts 'Creating trips...'
-trip1 = Trip.new(beginning_date: "25/12/2017", end_date: "30/12/2017", location_id: "1", activities: "Not yet")
+trip1 = Trip.new(id: "1", beginning_date: "25/12/2017", end_date: "30/12/2017", location_id: "1", user_id: "1")
 trip1.save!
-puts 'Finished!'
 
-trip2 = Trip.new(beginning_date: "14/01/2018", end_date: "16/01/2018", location_id: "2", activities: "Not yet")
+trip2 = Trip.new(id: "2", beginning_date: "14/01/2018", end_date: "16/01/2018", location_id: "2", user_id: "1")
 trip2.save!
 puts "Finished!"

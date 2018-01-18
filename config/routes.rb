@@ -5,7 +5,7 @@ root to: 'pages#home'
 devise_for :users
 
 get 'users/:id' => 'users#show', as: :user
-get '/trips' => 'trips#show', as: :trips
+get '/trips/:id' => 'trips#show', as: :trips
 get '/activities' => 'activities#show', as: :activities
 
 end
