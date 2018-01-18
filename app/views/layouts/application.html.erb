@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
-<% if current_page?('/trips/:id') %>
+<% if current_page?(@trips) %>
     <body>
      <div class="container">
       <div class="content">
@@ -25,7 +25,6 @@
     <%= render 'shared/footer' %>
     </body>
 <% end %>
- 
 </html>
 
 
