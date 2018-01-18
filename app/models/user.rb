@@ -7,6 +7,8 @@ class User < ApplicationRecord
  # has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100"},
  # validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 has_many :trips
-has_many :localisation
 has_many :friends
+has_many :locations
+has_many :activities
+
 end
