@@ -10,9 +10,31 @@ h1 {
   margin-left: 425px;
 }
 
-.body {
-  background: url(Sail_Away.mp4);
+// a  {
+//   color: white;
+//   text-decoration: none;
+//   font-size: 20px;
+// }
+
+#a1 {
+  float: right;
+  color: white;
+  font-size: 17px;
+  margin-top: -34px;
+  padding-right: 30px;
+  font-family: "Gloria Hallelujah";
 }
+
+#a2 {
+  float: right;
+  font-size: 17px;
+  color: white;
+  margin-right: 30px;
+  margin-top: -34px;
+  padding-right: 92px;
+  font-family: "Gloria Hallelujah";
+}
+
 
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -94,7 +116,7 @@ img {
 
 @media (min-width: 56rem) {
   .cards__item {
-    width: 24.3333%;
+    width: 12.3333%;
   }
 }
 
@@ -161,19 +183,15 @@ img {
 }
 
 .card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
+  background-image: url(saint_pet.jpg);
 }
 
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
+.card__image--flowers2 {
+  background-image: url(cuba.jpg);
 }
 
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
-}
-
-.card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
+.card__image--flowers3 {
+  background-image: url(cadix.jpg);
 }
 
 .card__title {

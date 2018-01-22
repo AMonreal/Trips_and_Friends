@@ -19,7 +19,7 @@ class TripsController < ApplicationController
   end
 
   def show
-    set_trip
+    @trip = Trip.find(params[:id])
   end
 
   private
@@ -28,7 +28,7 @@ class TripsController < ApplicationController
     params.require(:trip).permit(:beginning_date, :end_date, :location_id, :user_id, :activities)
   end
 
-  def set_trip
-    @trip = Trip.find(params[:id])
-  end
+  # def set_trip
+  #   @trip = Trip.find(params[:id])
+  # end
 end
