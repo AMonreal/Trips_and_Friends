@@ -1,6 +1,33 @@
 <!-- mettre form de création pour le trip -->
-<form action="">
+<%= stylesheet_link_tag "trips_create" %>
+<link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
+
+
+<!-- <form action="">
   <input type="text">Beginning Date<br>
   <input type="text">End Date<br>
   <input type="text">Location<br>
-</form>
+</form> -->
+
+<%= month_calendar do |date| %>
+  <%= date.day %>
+<% end %>
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+<div class='login'>
+  <h3>Medias & Location</h2>
+  <input name='username' placeholder='Username' type='text'>
+  <input id='pw' name='password' placeholder='Password' type='password'>
+  <input name='email' placeholder='E-Mail Address' type='text'>
+  <input class='animated' type='submit' value='Terminé'>
+</div>
+
+<div class='activities_form'>
+  <h2>My Activities</h2>
+  <input name='Type' placeholder='Type :' type='text'>
+  <input name='Name' placeholder='Name :' type='text'>
+  <input name='Rating' placeholder='Rating' type='text'>
+  <input class='animated' type='submit' value='Terminé'>
+</div>
