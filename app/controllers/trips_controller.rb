@@ -5,7 +5,14 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(trip.params)
+    @trip = Trip.new(trip_params)
+    authorize @trip
+    @trip.user = current_user
+    if trip.save
+      redirect_to root_path #à modifier
+    else
+      render :new
+    end
   end
 
   def index
