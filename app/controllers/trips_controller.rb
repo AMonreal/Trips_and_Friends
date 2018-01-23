@@ -11,7 +11,7 @@ class TripsController < ApplicationController
     if @trip.save
       redirect_to '/trips' #à modifier y'avait écrit root_path avant
     else
-      render :new
+      render :create
     end
   end
 
