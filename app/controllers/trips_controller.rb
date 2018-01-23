@@ -6,10 +6,10 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-    authorize @trip
+    # authorize @trip
     @trip.user = current_user
-    if trip.save
-      redirect_to root_path #à modifier
+    if @trip.save
+      redirect_to '/trips' #à modifier y'avait écrit root_path avant
     else
       render :new
     end
@@ -26,16 +26,25 @@ class TripsController < ApplicationController
   end
 
   def show
-    @trip = Trip.find(params[:id])
+    set_trip
+    # authorize trip
+    @activities = Activity.where(trip: @trip)
+    if @trip.activities.find_by_user_id(current_user.id)
+      @activity = @trip.activities.find_by_user_id(current_user.id)
+    else
+      @trip = Trip.new
   end
-
-  private
+  @activities = Activity.where(trip: @trip)
+  @activity = Activity.new
+end
 
   def trip_params
-    params.require(:trip).permit(:beginning_date, :end_date, :location_id, :user_id, :activities)
+    params.permit(:beginning_date, :end_date, :location_id, :user_id, :activities)
   end
 
-  # def set_trip
-  #   @trip = Trip.find(params[:id])
-  # end
+  private :trip_params
+
+  def set_trip
+    @trip = Trip.find(params[:id])
+  end
 end
