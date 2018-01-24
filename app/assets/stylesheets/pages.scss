@@ -129,11 +129,12 @@ figure #bike1 use {
 }
 
  .btn_SignUp a {
-    text-decoration: none;
-    color: white;
-    padding-left: 8px;
-    font-family: "Barrio";
-  }
+  text-decoration: none;
+  color: white;
+  padding-left: 17px;
+  font-family: "Barrio";
+  font-size: 20px;
+}
 
 .btn_SignUp:hover {
   opacity: 1;
@@ -160,7 +161,8 @@ figure #bike1 use {
   text-decoration: none;
   color: white;
   font-family: "Barrio";
-  padding-left: 8px;
+  font-size: 20px;
+  padding-left: 22px;
 }
 
 .btn_LogIn:hover {
