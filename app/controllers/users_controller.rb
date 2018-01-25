@@ -2,6 +2,12 @@ class UsersController < ApplicationController
 
   def show
     set_user
+    @users = User.where.not(latitude: nil, longitude: nil)
+    @markers = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   def new
@@ -23,17 +29,18 @@ class UsersController < ApplicationController
     set_user
   end
 
-  def index
+    def index
     @users = User.all
-  end
+    end
 
-  def localisation
-  @users = User.all
-  @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-  marker.lat user.latitude
-  marker.lng user.longitude
-end
-  end
+
+#   def localisation
+#   @users = User.all
+#   @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+#   marker.lat user.latitude
+#   marker.lng user.longitude
+# end
+#   end
 
    private
   def user_params
