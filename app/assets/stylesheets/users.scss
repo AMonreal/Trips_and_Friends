@@ -11,8 +11,8 @@
 .profile-container {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
-  border: 2px solid rgb(40,91,97);
-  border-radius: 3px;
+  // border: 2px solid rgb(40,91,97);
+  // border-radius: 3px;
 }
 
 .map-container {
@@ -30,7 +30,7 @@
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
   padding-left: 189px;
-  padding-top: 57px;
+  padding-top: 80px;
   font-size: 22px;
 }
 
@@ -72,15 +72,15 @@ h1 {
   font-family: 'Barrio';
   font-size: 40px;
   color: #35B0AB;
-  padding-left: 205px;
-  margin-top: 17px;
+  position: absolute;
+  top: 105px;
+  left: -320px;
 }
-
 
 .avatar-container {
   background-color: #1CA2BB;
   margin-left: 1.5rem;
-  margin-top: 3.5rem;
+  margin-top: 5.5rem;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
