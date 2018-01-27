@@ -6,7 +6,8 @@
         <a href="/users/sign_up">Sign Up</a>
       </div>
        <div class="btn_LogIn">
-    <a href="/users/sign_in">Log In</a>
+    <!-- <a href="/users/sign_in">Log In</a> -->
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
 <!-- </div> -->
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -44,7 +45,17 @@
   </defs>
   </svg>
 </figure>
-<!-- <div class="explications_container">
+<div class="footer">
+  <div class="footer-wagon">
+    <div class="Text-footer">
+      <p>Always organize your Trips with your Friends around !</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Là on va mettre le reste, ce que je veux mettre en-dessous du globe
+ --><!-- <div class="explications_container">
   <h1>LET'S TRAVEL</h1>
   <div class="content_top-left">
     <p>Une nouvelle manière de voyager...</p>

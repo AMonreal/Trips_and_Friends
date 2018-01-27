@@ -1,39 +1,38 @@
 
-<%= stylesheet_link_tag "users" %>
-<link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
-
 <div class="wrapper">
   <div class="profile-container">
     <div class="profile-content">
       <h1>Profile</h1>
-        <div class="avatar-container">
-          <div id="avatar" class="avatar">
-          </div>
+      <div class="avatar-container">
+        <div id="avatar" class="avatar">
         </div>
-        <div class="user_informations">
-          <%= @user.first_name %>
-          <%= @user.last_name %>
-        </div>
-          <%= link_to "My Friends", "/mettreroute", class: "linktofriends" %>
-          <%= image_tag "group.svg", id: "logo2" %>
-          <%= link_to "My Trips", "/trips/1", class: "linktotrips" %>
-          <%= image_tag "maps.svg", id: "logo1" %>
+      </div>
+      <div class="user_informations">
+        <%= @user.first_name %>
+        <%= @user.last_name %>
+      </div>
+      <%= link_to "My Friends", "/mettreroute", class: "linktofriends" %>
+      <%= image_tag "group.svg", id: "logo2" %>
+      <%= link_to "My Trips", "/trips/1", class: "linktotrips" %>
+      <%= image_tag "maps.svg", id: "logo1" %>
     </div>
   </div>
- </div>
-  <div id="map" style="width: 100%; height: 600px;"></div>
-   <% content_for(:after_js) do %>
-    <%= javascript_tag do %>
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(<%= raw @markers.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
-      });
-    <% end %>
-  <% end %>
+  <div id="map" style='width: 100%; height: 600px;'></div>
+</div>
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+    var handler = Gmaps.build('Google');
+    handler.buildMap({ internal: { id: 'map' } }, function(){
+      markers = handler.addMarkers(<%= raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      if (markers.length == 0) {
+        handler.getMap().setZoom(2);
+      } else if (markers.length == 1) {
+        handler.getMap().setZoom(14);
+      }
+    });
+  </script>
+<% end %>
+
+<!-- Là ça marche toujours pas, mais on sait toujours pas pourquoi. -->
