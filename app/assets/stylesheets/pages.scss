@@ -132,7 +132,7 @@ figure #bike1 use {
   text-decoration: none;
   color: white;
   padding-left: 17px;
-  font-family: "Barrio";
+  font-family: "Mindfully";
   font-size: 20px;
 }
 
@@ -160,7 +160,7 @@ figure #bike1 use {
 .btn_LogIn a {
   text-decoration: none;
   color: white;
-  font-family: "Barrio";
+  font-family: "Mindfully";
   font-size: 20px;
   padding-left: 22px;
 }
@@ -171,28 +171,137 @@ figure #bike1 use {
   color: white;
 }
 
+// code pour la banner - mais la garde-t-ton ?
+
+.banner {
+  background: #085F63;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  border-radius: 3px;
+  position: absolute;
+  width: 100%;
+  opacity: 0.8;
+  bottom: 235px;
+}
+
+.banner-wagon-wagon {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  margin-right: 40px;
+}
+
+.Text-banner {
+  color: white;
+  font-size: 20px;
+}
+
+// CSS pour bas de la page - en-dessous du globe ///
+
+.explications_container {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  border-radius: 3px;
+}
 
 
+.content_top-left {
+  background: #FAF4D0;
+  position: absolute;
+  left: 10px;
+  width: 50%;
+  height: 600px;
+  border-radius: 3px;
+}
 
+#text-top-left {
+  position: absolute;
+  font-family: 'Mindfully';
+  color: black;
+  top: 250px;
+  font-size: 45px;
+  left: 85px;
+}
 
- // color: white;
- // border: 1px solid #999999;
- // padding: 10px 15px;
- // border-radius: 50px;
- // font-weight: lighter;
- // opacity: 0.6;
- // display: flex;
- // float: left;
- // padding: 15px;
- // width: 100px;
- // margin-left: 184px;
- // margin-top: 195px;
+.content_top-right {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 600px;
+  border-radius: 2px;
+  background-image: url('Landing Page/Paysage 2.png');
+  background-repeat: no-repeat;
+  background-position: 48% 100%;
+  background-size: 930px;
+}
 
+.content_top-right:after {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 600px;
+  border-radius: 2px;
+  background-image: url('Landing Page/Paysage 2.png');
+  opacity: 0.75;
+  background-repeat: no-repeat;
+  background-position: 48% 100%;
+  background-size: 930px;
+}
 
+#text-top-right-1 {
+  color: black;
+  font-family: "Mindfully";
+  font-size: 37px;
+  position: absolute;
+  top: 65px;
+  left: 145px;
+}
 
+#logo-search {
+  height: 40px;
+  max-width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  top: 68px;
+  left: 80px;
+}
 
+#text-top-right-2 {
+  position: absolute;
+  top: 130px;
+  left: 145px;
+  font-size: 37px;
+  font-family: 'Mindfully';
+}
 
+#logo-discover {
+  height: 40px;
+  max-width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  top: 133px;
+  left: 80px;
+}
 
+#logo-note {
+  height: 40px;
+  max-width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  top: 220px;
+  left: 86px;
+}
 
-
-
+#text-top-right-3 {
+  position: absolute;
+  top: 235px;
+  left: 145px;
+  font-family: 'Mindfully';
+  font-size: 37px;
+}
