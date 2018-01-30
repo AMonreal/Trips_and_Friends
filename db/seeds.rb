@@ -24,6 +24,8 @@ puts 'Creating trips...'
 trip1 = Trip.new(id: "1", title: "A Trip to Russia", description: "Five days in Saint Petersburg", beginning_date: "25/12/2017", end_date: "30/12/2017", activities: "yoga", location_id: "1", user_id: "1")
 trip1.save!
 
-trip2 = Trip.new(id: "2", beginning_date: "14/01/2018", end_date: "16/01/2018", location_id: "2", user_id: "1")
+trip2 = Trip.new(id: "2", title: "A Trip to Normandy", description: "Two days in Camembert", beginning_date: "14/01/2018", end_date: "16/01/2018", activities: "Riding on horseback", location_id: "2", user_id: "1")
 trip2.save!
 puts "Finished!"
+
+

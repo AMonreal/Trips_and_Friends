@@ -8,7 +8,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @user = current_user
     @trip.user_id = @user
-    if @trip.save!
+    if @trip.save
       redirect_to '/trips'
     else
       render :create
