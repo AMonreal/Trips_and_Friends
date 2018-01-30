@@ -4,11 +4,12 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
-  def create
+ def create
     @trip = Trip.new(trip_params)
-    @trip.user = current_user
-    if @trip.save
-      redirect_to '/trips' #à modifier y'avait écrit root_path avant
+    @user = current_user
+    @trip.user_id = @user
+    if @trip.save!
+      redirect_to '/trips'
     else
       render :create
     end
