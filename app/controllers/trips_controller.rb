@@ -6,7 +6,6 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-    # authorize @trip
     @trip.user = current_user
     if @trip.save
       redirect_to '/trips' #à modifier y'avait écrit root_path avant
@@ -39,7 +38,7 @@ class TripsController < ApplicationController
 end
 
   def trip_params
-    params.permit(:beginning_date, :end_date, :location_id, :user_id, :activities)
+    params.permit(:beginning_date, :end_date, :title, :description, :location_id, :user_id, :activities)
   end
 
   private :trip_params

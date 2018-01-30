@@ -1,7 +1,6 @@
 class Trip < ApplicationRecord
 
-  belongs_to :user
-  has_many :users
+  belongs_to :users
   has_many :location, through: :users
   has_many :activities, through: :users
 

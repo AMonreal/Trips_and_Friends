@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "trips_index" %>
+..<%= stylesheet_link_tag "trips_index" %>
 <link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
 <!-- <div class="Title">
@@ -20,14 +20,17 @@
     <% @trips.each do |trip| %>
       <li class="cards__item">
         <div class="card">
+          <%= trip.title %>
+          <%= trip.description %>
           <%= trip.beginning_date %>
+          <%= trip.end_date %>
         </div>
       </li>
     <% end %>
   </ul>
 
    <!-- liste a retirer -->
-  <ul class="cards">
+  <!-- <ul class="cards">
     <li class="cards__item">
       <div class="card">
         <div class="card__image card__image--flowers"></div>
@@ -58,6 +61,6 @@
         </div>
       </div>
     </li>
-  </ul>
+  </ul> -->
   <a href="/trips/create" class="btn-medium">Create another Trip !</a>
 </div>
