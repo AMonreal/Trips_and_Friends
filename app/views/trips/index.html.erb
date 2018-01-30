@@ -1,4 +1,4 @@
-..<%= stylesheet_link_tag "trips_index" %>
+<%= stylesheet_link_tag "trips_index" %>
 <link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
 <!-- <div class="Title">
@@ -17,7 +17,7 @@
 <div>
   <!-- Il faut que je fasse la logique derrière le formulaire qui génèrera les cards pour chaque user, avec les informations du trip, il faut que je fasse les migrations nécessaires en rajoutant un titre + description du trip avec rails g migrate etc là.  -->
   <ul class="cards">
-    <% @trips.each do |trip| %>
+    <%= @trips.each do |trip| %>
       <li class="cards__item">
         <div class="card">
           <%= trip.title %>
