@@ -1,8 +1,8 @@
 class Trip < ApplicationRecord
 
-  belongs_to :users
-  has_many :location, through: :users
-  has_many :activities, through: :users
+  belongs_to :users, optional: true
+  has_many :activities
+  #through: :users  ?
 
 
 # validates :beginning_date, presence: true

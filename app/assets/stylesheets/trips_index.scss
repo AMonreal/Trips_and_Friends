@@ -10,12 +10,6 @@ h1 {
   margin-left: 425px;
 }
 
-// a  {
-//   color: white;
-//   text-decoration: none;
-//   font-size: 20px;
-// }
-
 #a1 {
   float: right;
   color: white;
@@ -62,95 +56,27 @@ h1 {
   font-size: 35px;
 }
 
-
-// *,
-// *::before,
-// *::after {
-//   -webkit-box-sizing: border-box;
-//           box-sizing: border-box;
-// }
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  background-color: white;
-  border: 1px solid #cccccc;
-  color: #696969;
-  padding: 0.5rem;
-  text-transform: lowercase;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
-  font-family: 'Gloria Hallelujah';
-}
-
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards__item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards__item {
-    width: 12.3333%;
-  }
-}
-
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: hidden;
+  width: 300px;
+  height: 400px;
+  margin-left: 15px;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
 }
 
-.card:hover .card__image {
-  -webkit-filter: contrast(100%);
-          filter: contrast(100%);
-}
-
-.card__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.card_content {
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex: 1 1 auto;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -160,55 +86,52 @@ img {
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  -webkit-filter: contrast(70%);
-          filter: contrast(70%);
+  filter: contrast(70%);
   overflow: hidden;
   position: relative;
-  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-}
-
-.card__image::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-
-@media (min-width: 40rem) {
-  .card__image::before {
-    padding-top: 66.6%;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
   }
 }
 
-.card__image--flowers {
-  background-image: url(saint_pet.jpg);
+#ImageRussia {
+  background: url('saint_pet.jpg');
+  background-position: 65% 50%;
 }
 
-.card__image--flowers2 {
-  background-image: url(cuba.jpg);
-}
 
-.card__image--flowers3 {
-  background-image: url(cadix.jpg);
-}
-
-.card__title {
-  color: #696969;
+.trip-title {
+  color: #50595C;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-family: '56th Street';
 }
 
-.card__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+.trip-description {
+  flex: 1 1 auto;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  font-family: '56th Street';
+  margin-top: 10px;
+}
+
+.trip-dates {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-family: '56th Street';
 }
 
 .btn-medium {
@@ -222,12 +145,29 @@ img {
   font-size: 15px;
   position: absolute;
   bottom: 90px;
-  left: 10px;
+  right: 10px;
 }
 
 .btn-medium:hover {
   opacity: 1;
   text-decoration: none;
   color: white;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid #50595C;
+  //border-radius: 1rem;
+  color: #50595C;
+  padding: 0.5rem;
+  text-transform: lowercase;
+  font-family: '56th Street';
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
 }
 

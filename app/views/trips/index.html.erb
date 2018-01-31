@@ -20,47 +20,31 @@
     <%= @trips.each do |trip| %>
       <li class="cards__item">
         <div class="card">
-          <%= trip.title %>
-          <%= trip.description %>
-          <%= trip.beginning_date %>
-          <%= trip.end_date %>
+          <div class="card__image" id="ImageRussia"></div>
+          <div class="card_content">
+            <div class="trip-title"><%= trip.title %></div>
+            <div class="trip-description"><%= trip.description %></div>
+            <div class="trip-dates">
+            <%= trip.beginning_date %>
+            <%= trip.end_date %>
+            </div>
+            <button class="btn btn--block card__btn">See more</button>
+          </div>
         </div>
       </li>
     <% end %>
   </ul>
-
-   <!-- liste a retirer -->
-  <!-- <ul class="cards">
-    <li class="cards__item">
-      <div class="card">
-        <div class="card__image card__image--flowers"></div>
-        <div class="card__content">
-          <div class="card__title">TRIP N*1</div>
-          <p class="card__text">A ten days travel to Russia.</p>
-          <button class="btn btn--block card__btn">See More</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards__item">
-      <div class="card">
-        <div class="card__image card__image--flowers2"></div>
-        <div class="card__content">
-          <div class="card__title">TRIP N*2</div>
-          <p class="card__text">A ten days travel to Cuba.</p>
-          <button class="btn btn--block card__btn">See More</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards__item">
-      <div class="card">
-        <div class="card__image card__image--flowers3"></div>
-        <div class="card__content">
-          <div class="card__title">TRIP N*3</div>
-          <p class="card__text">A two week travel to Spain.</p>
-          <button class="btn btn--block card__btn">See More</button>
-        </div>
-      </div>
-    </li>
-  </ul> -->
   <a href="/trips/create" class="btn-medium">Create another Trip !</a>
 </div>
+
+<!--  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">Flex</div>
+        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li> -->
+
