@@ -56,6 +56,14 @@ h1 {
   font-size: 35px;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   background-color: white;
   border-radius: 0.25rem;
@@ -63,9 +71,10 @@ h1 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 300px;
+  width: 250px;
   height: 400px;
   margin-left: 15px;
+  margin-top: 15px;
   &:hover {
     .card__image {
       filter: contrast(100%);
@@ -115,6 +124,14 @@ h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: '56th Street';
+}
+
+#p1-card {
+  font-size: 10px;
+}
+
+#p2-card {
+  font-size: 10px;
 }
 
 .trip-description {

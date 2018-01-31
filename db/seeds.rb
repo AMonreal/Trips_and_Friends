@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
 puts "destroying old data..."
   # Like.destroy_all
   Trip.destroy_all
@@ -24,8 +26,8 @@ puts 'Creating trips...'
 trip1 = Trip.new(id: "1", title: "A Trip to Russia", description: "Five days in Saint Petersburg", beginning_date: "25/12/2017", end_date: "30/12/2017", user_id: "1")
 trip1.save!
 
-# trip2 = Trip.new(id: "2", title: "A Trip to Normandy", description: "Two days in Camembert", beginning_date: "14/01/2018", end_date: "16/01/2018", user_id: "1")
-# trip2.save!
+trip2 = Trip.new(id: "2", title: "A Trip to Cuba", description: "Ten days in La Havana", beginning_date: "20/12/2008", end_date: "30/12/2008", user_id: "1")
+trip2.save!
 puts "Finished!"
 
 

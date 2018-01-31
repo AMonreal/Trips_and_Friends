@@ -4,8 +4,25 @@
     <div class="profile-content">
       <h1>Profile</h1>
       <div class="avatar-container">
-        <div id="avatar" class="avatar">
-        </div>
+       <div id="avatar" class="avatar"></div>
+        <script> new Shubox("#avatar", {
+  // image transform queue
+  transformName: "avatar-demo",
+  // do not use built-in previewsContainer
+  previewsContainer: false,
+  // on success - insert the image w/a flip-in
+  // animate.css classname
+  success: function(file) {
+    img = new Image();
+    img.onload = function() {
+      $(".avatar").append(
+        '<img src="' + file.s3url + '" class="animated flipInY" />'
+      );
+    };
+    img.src = file.s3url;
+  }
+});
+</script>
       </div>
       <div class="user_informations">
         <%= @user.first_name %>
@@ -13,7 +30,7 @@
       </div>
       <%= link_to "My Friends", "/mettreroute", class: "linktofriends" %>
       <%= image_tag "group2.svg", id: "logo2" %>
-      <%= link_to "My Trips", "/trips/1", class: "linktotrips" %>
+      <%= link_to "My Trips", "/trips", class: "linktotrips" %>
       <%= image_tag "maps.svg", id: "logo1" %>
     </div>
   </div>
