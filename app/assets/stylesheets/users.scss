@@ -26,55 +26,63 @@
   position: sticky !important;
 }
 
+.profile-container {
+  padding-top: 10px;
+  border: white 2px solid;
+  border-radius: 3px;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
 .user_informations {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: '56th Street';
   color: white;
   padding-left: 189px;
   padding-top: 80px;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .linktofriends {
   color: white;
   text-decoration: none;
   position: absolute;
-  margin-top: 15px;
-  font-family: 'Gloria Hallelujah';
+  margin-top: 24px;
+  font-family: 'Mindfully';
   margin-left: 224px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .linktotrips {
   color: white;
   text-decoration: none;
-  font-family: 'Gloria Hallelujah';
+  font-family: 'Mindfully';
   margin-left: 225px;
-  margin-top: 58px;
+  margin-top: 64px;
   position: absolute;
-  font-size: 20px;
-}
+  font-size: 25px;
+  }
 
 #logo1 {
   width: 29px;
   position: absolute;
-  margin-left: 190px;
+  margin-left: 181px;
   margin-top: 62px;
 }
 
 #logo2 {
   position: absolute;
   width: 27px;
-  margin-left: 190px;
+  margin-left: 183px;
   margin-top: 19px;
 }
 
 h1 {
-  font-family: 'Barrio';
+  font-family: '56th Street';
   font-size: 40px;
   color: #35B0AB;
   position: absolute;
-  top: 105px;
-  left: -320px;
+  top: 138px;
+  left: -215px;
 }
 
 .avatar-container {
