@@ -1,3 +1,4 @@
+
 new Shubox("#avatar", {
   // image transform queue
   transformName: "avatar-demo",

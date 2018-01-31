@@ -5,24 +5,6 @@
       <h1>Profile</h1>
       <div class="avatar-container">
        <div id="avatar" class="avatar"></div>
-        <script> new Shubox("#avatar", {
-  // image transform queue
-  transformName: "avatar-demo",
-  // do not use built-in previewsContainer
-  previewsContainer: false,
-  // on success - insert the image w/a flip-in
-  // animate.css classname
-  success: function(file) {
-    img = new Image();
-    img.onload = function() {
-      $(".avatar").append(
-        '<img src="' + file.s3url + '" class="animated flipInY" />'
-      );
-    };
-    img.src = file.s3url;
-  }
-});
-</script>
       </div>
       <div class="user_informations">
         <%= @user.first_name %>
@@ -50,6 +32,7 @@
       }
     });
   </script>
+  <script type="text/javascript" src="javascripts/users_show.js"></script>
 <% end %>
 
 <!-- Là ça marche toujours pas, mais on sait toujours pas pourquoi. -->
