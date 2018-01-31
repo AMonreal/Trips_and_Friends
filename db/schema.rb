@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 20180130180305) do
     t.integer "rating"
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "trips", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
