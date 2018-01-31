@@ -9,21 +9,11 @@
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
-<!-- <div class='medias_form'>
-  <h3>Medias & Location</h2>
-  <input name='username' placeholder='Location' type='text'>
-  <input id='pw' name='password' placeholder='Photo Uploader' type='password'>
-  <input name='email' placeholder='Videos Uploader' type='text'>
-  <input class='animated' type='submit' value='Terminé'>
+
+<div class="form-create-trip">
+<%= form_for Trip.new, url: {action: "create"}, html: {class: "create-trips"} do |f| %>
+<%= f.text_field :title, placeholder: "A Trip to..." %>
+<%= f.text_field :description, placeholder: "A few days in..." %>
+<%= f.button :submit, "Create" %>
+<% end %>
 </div>
-
-<div class='activities_form'>
-  <h2>My Activities</h2>
-  <input name='Type' placeholder='Type :' type='text'>
-  <input name='Name' placeholder='Name :' type='text'>
-  <!-- <input name='Rating' placeholder='Rating' type='text'> -->
-  <!-- <input class='animated' type='submit' value='Terminé'>
-</div> -->
-
-
-
