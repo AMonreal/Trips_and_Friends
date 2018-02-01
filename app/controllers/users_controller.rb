@@ -33,18 +33,9 @@ class UsersController < ApplicationController
     @users = User.all
     end
 
-
-#   def localisation
-#   @users = User.all
-#   @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-#   marker.lat user.latitude
-#   marker.lng user.longitude
-# end
-#   end
-
    private
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :avatar, :location_id, :password, :password_confirmation)
+    params.require(:user).permit(:email, :first_name, :last_name, :avatar, :password, :password_confirmation)
   end
 
   def set_user

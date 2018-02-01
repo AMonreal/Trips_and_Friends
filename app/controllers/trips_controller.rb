@@ -27,19 +27,18 @@ class TripsController < ApplicationController
 
   def show
     set_trip
-    # authorize trip
-    @activities = Activity.where(trip: @trip)
-    if @trip.activities.find_by_user_id(current_user.id)
-      @activity = @trip.activities.find_by_user_id(current_user.id)
-    else
-      @trip = Trip.new
-  end
-  @activities = Activity.where(trip: @trip)
-  @activity = Activity.new
+  #   @activities = Activity.where(trip: @trip)
+  #   if @trip.activities.find_by_user_id(current_user.id)
+  #     @activity = @trip.activities.find_by_user_id(current_user.id)
+  #   else
+  #     @trip = Trip.new
+  # end
+  # @activities = Activity.where(trip: @trip)
+  # @activity = Activity.new
 end
 
   def trip_params
-    params.permit(:beginning_date, :end_date, :title, :description, :location_id, :user_id, :activities, :picture)
+    params.permit(:id, :beginning_date, :end_date, :title, :description, :location_id, :user_id, :activities, :picture)
   end
 
   private :trip_params
