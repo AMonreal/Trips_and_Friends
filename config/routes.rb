@@ -10,7 +10,8 @@ get '/trips' => 'trips#index', as: :trips
 get '/trips/create' => 'trips#create', as: :trip
 get '/trips/show/:id' => 'trips#show'
 get '/activities' => 'activities#show', as: :activities
-
+get '/friends' => 'friends#index'
+get '/friends/profile/:id' => 'friends#show'
 
 end
 
