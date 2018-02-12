@@ -4,16 +4,20 @@
 
 <link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
-<div class='login'>
+<!-- <div class='login'>
   <h2><%= image_tag "planet-earth.svg", {id: 'planet'} %> Log In <%= image_tag "planet-earth.svg", {id: 'planet'} %> </h2>
-<!--   <input first_name='first_name' placeholder='First Name' type='text'>
-  <input last_name='Last Name' placeholder='Last Name' type='text'> -->
   <input name='email' placeholder='E-Mail Address' type='text'>
   <input id='pw' name='password' placeholder='Password' type='password'>
- <!--  <div class='agree'>
-    <input id='agree' name='agree' type='checkbox'>
-    <label for='agree'></label>Accept rules and conditions
-  </div> -->
   <input class='animated' type='submit' value='Done   :)'>
-</div>
+</div> -->
 
+<%= simple_form_for @user, html: { class: 'form-horizontal'} do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.button :submit %>
+<% end %>
+
+<!-- Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal' or '.form-inline', as the following:
+
+    = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form| -->

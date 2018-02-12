@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
 gem 'gmaps4rails'
 source 'https://rails-assets.org' do
