@@ -11,14 +11,26 @@
   <input class='animated' type='submit' value='Done   :)'>
 </div> -->
 
-<%= simple_form_for @user, url: users_path do |f| %>
-  <%= f.input :email, label: false %>
-  <%= f.input :password, label: false %>
-  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
-  <%= f.button :submit %>
-<% end %>
+
 
 <!-- Inside your views, use the 'simple_form_for' with one of the Bootstrap form
   classes, '.form-horizontal' or '.form-inline', as the following:
 
     = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form| -->
+<h2><%= image_tag "planet-earth.svg", {id: 'planet'} %> Log In <%= image_tag "planet-earth.svg", {id: 'planet'} %></h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <%= simple_form_for @user, url: users_path do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, label: false %>
+        <%= f.input :password, label: false %>
+        <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+      </div>
+      <div class="form-actions">
+      <%= f.button :submit, placeholder: "Submit" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

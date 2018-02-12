@@ -17,7 +17,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-#planet {
+/*#planet {
   width: 40px;
 }
 
@@ -33,9 +33,10 @@ a {
   left: 50%;
   margin-left: -175px;
   margin-top: 98px;
-}
+}*/
 
-/*input[type="text"], input[type="password"] {
+
+input[type="text"], input[type="password"] {
   width: 350px;
   padding: 20px 0px;
   background: transparent;
@@ -87,22 +88,6 @@ input[type="submit"]:hover {
   animation-name: shake;
 }
 
-.forgot {
-  margin-top: 30px;
-  display: block;
-  font-size: 11px;
-  text-align: center;
-  font-weight: bold;
-}
-.forgot:hover {
-  margin-top: 30px;
-  display: block;
-  font-size: 11px;
-  text-align: center;
-  font-weight: bold;
-  color: #6D7781;
-}
-
 .agree {
   padding: 30px 0px;
   font-size: 12px;
@@ -130,4 +115,4 @@ input[type="submit"]:hover {
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
-}*/
+}
