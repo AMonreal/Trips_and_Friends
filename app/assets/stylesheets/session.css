@@ -35,7 +35,7 @@ a {
   margin-top: 98px;
 }
 
-input[type="text"], input[type="password"] {
+/*input[type="text"], input[type="password"] {
   width: 350px;
   padding: 20px 0px;
   background: transparent;
@@ -130,4 +130,4 @@ input[type="submit"]:hover {
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
-}
+}*/

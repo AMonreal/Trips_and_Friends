@@ -4,7 +4,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
-<div class='login'>
+<!-- <div class='login'>
   <h2> <%= image_tag "planet-earth.svg", {id: 'planet'} %> Sign Up <%= image_tag "planet-earth.svg", {id: 'planet'} %></h2>
   <input first_name='first_name' placeholder='First Name' type='text'>
   <input last_name='Last Name' placeholder='Last Name' type='text'>
@@ -15,6 +15,15 @@
     <label for='agree'></label>Accept rules and conditions
   </div>
   <input class='animated' type='submit' value='Submit'>
-</div>
+</div> -->
 <!--
 Là pareil, voir si je peux pas le refaire avec ce que génère automatiquement Devise pour le log in ET le Sign up des users, donc il faudra sûrement remplacer tout ça. -->
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name, placeholder: 'First Name' %>
+  <%= f.input :last_name, placeholder: 'Last Name' %>
+  <%= f.input :email, label: false, placeholder: 'example@gmail.com' %>
+  <%= f.input :password; label: false %>
+  <%= f.input :password_confirmation, label: false %>
+  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit %>
+<% end %>

@@ -13,6 +13,7 @@ get '/activities' => 'activities#show', as: :activities
 get '/friends' => 'friends#index'
 get '/friends/profile/:id' => 'friends#show'
 
+resources :users
 end
 
 
