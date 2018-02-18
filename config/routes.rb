@@ -9,7 +9,7 @@ get 'users/:id' => 'users#show', as: :user
 get '/trips' => 'trips#index', as: :trips
 post 'trips', to: 'trips#create'
 get '/trips/create' => 'trips#create', as: :trip
-get '/trips/show/:id' => 'trips#show'
+get '/trips/:id' => 'trips#show'
 get '/activities' => 'activities#show', as: :activities
 get '/friends' => 'friends#index'
 get '/friends/profile/:id' => 'friends#show'
@@ -19,5 +19,4 @@ end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
 

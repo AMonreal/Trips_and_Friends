@@ -1,22 +1,18 @@
 <%= stylesheet_link_tag "trips_show" %>
 <h1>Hahaha</h1>
 
-<div class="trip-info">
-      <%= @trips.each do |trip| %> <!-- cette ligne marche va savoir pourquoi, elle marche très bien sur une autre page -->
-      <h1><%= trip.title %></h1>
-      <p id="p-trip-show"><%= trip.description %></p>
-      <%= trip.beginning_date %>
-      <%= trip.end_date %>
-      <% end %>
+<div class="trip_info">
+  <%= @trip.title %>
+  <%= @trip.description %>
+  <%= @trip.beginning_date %>
+  <%= @trip.end_date %>
 </div>
-<div class="trip-medias">
-<!--   mettre le code pour créer le formulaire pour uploader les tofs
- -->
-</div>
-<div class="trip-activities">
-  <%= activities.type %>
-  <%= activities.name %>
-  <%= activities.rating %>
-</div>
+
+<!-- <div class="trip-medias">
+  mettre le code pour créer le formulaire pour uploader les tofs
+
+</div> -->
+<!-- <div class="trip-activities">
+</div> -->
 
 
