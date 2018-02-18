@@ -40,3 +40,4 @@ end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# vérifier que toutes les actions du CRUD pour user et trip marchent
