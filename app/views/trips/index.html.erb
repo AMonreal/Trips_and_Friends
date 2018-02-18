@@ -31,7 +31,8 @@
             <p id="p2-card">To...</p>
             <%= trip.end_date %>
             </div>
-            <button class="btn btn--block card__btn">See more</button>
+            <!-- <button class="btn btn--block card__btn">See more</button> -->
+            <%= link_to "See More", trip_show_path(trip) %>
           </div>
         </div>
       </li>

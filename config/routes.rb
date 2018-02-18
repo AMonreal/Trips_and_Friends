@@ -9,7 +9,7 @@ get 'users/:id' => 'users#show', as: :user
 get '/trips' => 'trips#index', as: :trips
 post 'trips', to: 'trips#create'
 get '/trips/create' => 'trips#create', as: :trip
-get '/trips/:id' => 'trips#show'
+get '/trips/:id' => 'trips#show', as: :trip_show
 get '/activities' => 'activities#show', as: :activities
 get '/friends' => 'friends#index'
 get '/friends/profile/:id' => 'friends#show'
