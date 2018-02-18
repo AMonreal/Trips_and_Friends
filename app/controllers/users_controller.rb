@@ -1,45 +1,46 @@
 class UsersController < ApplicationController
 
+
+  def index
+  @users = User.all         # GET /users
+  end
+
   def show
-    set_user
-    @users = User.where.not(latitude: nil, longitude: nil)
-    @markers = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
-      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
-    end
+  @user = User.find(params[:id])         # GET /users/:id
   end
 
   def new
-    @user = User.new
+  @user = User.new          # GET /users/new
   end
 
-  def create
-    @user = User.new(user.params)
-    if @user.save
-      log_in @user
-      flash[:success] = "Welcome to Friends & Trips !"
-      redirect_to @user
-    else
-      render :new
-    end
+  def create        # POST /users
+    @user = User.new(params[:user])
+    @user.save
   end
 
-  def edit
-    set_user
+  def edit          # GET /users/:id/edit
+    @user = User.find(params[:id])
   end
 
-    def index
-    @users = User.all
-    end
+  def update        # PATCH /users/:id
+    @user = User.find(params[:id])
+    @user.update(params[:user])
+  end
+
+  def destroy       # DELETE /users/:id
+  end
+
 
    private
+
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :avatar, :password, :password_confirmation)
   end
 
-  def set_user
-    @user = User.find(params[:id])
-  end
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 
 end
+
+

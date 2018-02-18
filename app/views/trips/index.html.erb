@@ -6,7 +6,11 @@
   <div class="navbar-wagon-right">
     <div class="Title-navbar">
       <p>MY TRIPS</p>
-      <a href="/home" id="a1">Log Out</a>
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <% else  %>
+        <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path %>
+      <% end %>
       <a href="/home" id="a2">Home</a>
     </div>
   </div>
@@ -31,7 +35,7 @@
           </div>
         </div>
       </li>
-      <%- end -%> <!-- cette petite pute affiche du texte où qu'il soit placé, qui es-tu, quel est ton projet ? Juste barre-toi. -->
+      <% end %> <!-- cette petite pute affiche du texte où qu'il soit placé, qui es-tu, quel est ton projet ? Juste barre-toi. -->
   </ul>
 
   <a href="/trips/create" class="btn-medium">Create another Trip !</a>

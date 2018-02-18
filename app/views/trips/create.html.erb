@@ -11,9 +11,17 @@
 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 
 <div class="form-create-trip">
-<%= form_for Trip.new, url: {action: "create"}, html: {class: "create-trips"} do |f| %>
-<%= f.text_field :title, placeholder: "A Trip to..." %>
-<%= f.text_field :description, placeholder: "A few days in..." %>
-<%= f.button :submit, "Create" %>
-<% end %>
+<form action="/trips" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="title" placeholder="Title">
+  <input type="text" name="description" placeholder="Description">
+  <input type="text" name="beginning_date" placeholder="Beginning of the trip">
+  <input type="text" name="end_date" placeholder="Ending of the trip">
+  <input type="submit">
+</form>
 </div>
+
+
+
+
+
