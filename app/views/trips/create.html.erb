@@ -2,9 +2,9 @@
 <%= stylesheet_link_tag "trips_create" %>
 <link href="https://fonts.googleapis.com/css?family=Barrio|Gloria+Hallelujah|Sofia" rel="stylesheet">
 
-<%= month_calendar do |date| %>
-  <%= date.day %>
-<% end %>
+  <%#= month_calendar do |date| %>
+  <%#= date %>
+  <%# end %>
 
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -15,8 +15,8 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <input type="text" name="title" placeholder="Title">
   <input type="text" name="description" placeholder="Description">
-  <input type="text" name="beginning_date" placeholder="Beginning of the trip">
-  <input type="text" name="end_date" placeholder="Ending of the trip">
+  <p>Début :<%= date_field(:trip, :beginning_date) %></p>
+  <p>Fin : <%= date_field(:trip, :end_date) %></p>
   <input type="submit">
 </form>
 </div>

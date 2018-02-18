@@ -27,7 +27,9 @@ class UsersController < ApplicationController
     @user.update(params[:user])
   end
 
-  def destroy       # DELETE /users/:id
+  def delete       # DELETE /users/:id
+    @user = User.find(params[:id])
+    @user.destroy
   end
 
 
