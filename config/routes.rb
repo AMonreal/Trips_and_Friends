@@ -18,6 +18,7 @@ patch "users/:id", to: "users#update"
 
 delete "users/:id", to: "users#destroy"
 
+
 get '/trips' => 'trips#index', as: :trips
 
 get '/trips/new' => 'trips#new', as: :trip
